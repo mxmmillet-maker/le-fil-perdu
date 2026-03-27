@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le Fil Perdu — Notes de recherche</title>
+<title>Le Fil Perdu — Notes de recherche v2</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#111;--s:#1a1a1a;--s2:#222;--bd:#2a2a2a;--t:#c8c8c8;--td:#777;--tb:#ebebeb;--ac:#c9a84c;--ac2:#8ab4f8;--g:#4ade80;--pk:#f06090;--or:#f0a040}
 body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--t);line-height:1.75;-webkit-font-smoothing:antialiased}
 
-/* HERO — calme, pas spectacle */
 .hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 24px;position:relative}
 .hero-content{max-width:620px}
 .hero-q{font-family:'Playfair Display',serif;font-size:clamp(22px,4.5vw,36px);font-weight:400;color:var(--tb);line-height:1.4;margin-bottom:32px}
@@ -19,7 +18,6 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--t);
 
 .page{max-width:700px;margin:0 auto;padding:0 24px 120px}
 
-/* INCIPIT */
 .incipit{padding:60px 0 50px;border-bottom:1px solid var(--bd);margin-bottom:50px}
 .incipit p{font-size:16px;line-height:1.9;margin-bottom:16px;font-weight:300}
 .incipit strong{color:var(--tb);font-weight:600}
@@ -30,19 +28,17 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--t);
 .legend{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0;padding:12px 16px;background:var(--s);border-radius:6px;font-size:12px;color:var(--td);align-items:center}
 .legend b{color:#999;margin-right:4px}
 
-/* NAV */
 .nav-bar{position:sticky;top:0;z-index:100;background:rgba(17,17,17,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);margin-bottom:40px}
 .nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:12px 0;cursor:pointer;user-select:none}
 .nav-toggle span:first-child{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--td)}
 .nav-toggle .ic{font-size:14px;color:var(--td);transition:transform .3s}
 .nav-bar.open .ic{transform:rotate(180deg)}
 .nav-menu{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.nav-bar.open .nav-menu{max-height:600px}
+.nav-bar.open .nav-menu{max-height:700px}
 .nav-menu a{display:block;padding:7px 0;font-size:13px;color:var(--ac2);text-decoration:none;border-bottom:1px solid #1e1e1e;transition:color .2s}
 .nav-menu a:hover{color:var(--ac)}
 .nav-menu a:last-child{border:none;margin-bottom:10px}
 
-/* SECTIONS */
 .section{margin-bottom:56px}
 h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--tb);margin-bottom:4px;line-height:1.3}
 .sn{font-size:12px;font-weight:600;color:var(--td);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:4px}
@@ -52,9 +48,10 @@ p{margin-bottom:12px;font-size:15px}
 
 .tag{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:2px 6px;border-radius:3px;margin-right:3px;vertical-align:middle;position:relative;top:-1px}
 .tf{background:#1a3a2a;color:var(--g)}.th{background:#3a2a1a;color:var(--or)}.ts{background:#3a1a2a;color:var(--pk)}.to{background:#1a2a3a;color:var(--ac2)}
+.tc{background:#2a1a3a;color:#c084fc}
 
 .callout{border-radius:6px;padding:14px 16px;margin:14px 0;font-size:14px;line-height:1.7}
-.ck{background:#141e2a;border-left:3px solid var(--ac2)}.ci{background:#221e14;border-left:3px solid var(--ac)}.cw{background:#1e1414;border-left:3px solid #c55}
+.ck{background:#141e2a;border-left:3px solid var(--ac2)}.ci{background:#221e14;border-left:3px solid var(--ac)}.cw{background:#1e1414;border-left:3px solid #c55}.cg{background:#141e16;border-left:3px solid #4ade80}
 .callout strong{color:var(--tb)}
 
 details{margin:10px 0;border:1px solid var(--bd);border-radius:6px;overflow:hidden}
@@ -73,10 +70,16 @@ a{color:var(--ac2);text-decoration:none}a:hover{text-decoration:underline}
 mark{background:#3a3520;color:#f0d060;padding:1px 4px;border-radius:3px}
 .num{font-weight:700;color:var(--ac)}
 
+.ratio-row{display:flex;gap:12px;margin:10px 0;flex-wrap:wrap}
+.ratio-box{background:var(--s);border:1px solid var(--bd);border-radius:6px;padding:10px 14px;font-size:13px;flex:1;min-width:140px}
+.ratio-box strong{color:var(--ac);display:block;font-size:15px;margin-bottom:2px}
+.ratio-box span{color:var(--td)}
+
 .fq{text-align:center;padding:40px 20px;margin:40px 0}
 .fq p{font-family:'Playfair Display',serif;font-size:18px;color:var(--td);font-style:italic;line-height:1.7}
 .footer{text-align:center;font-size:11px;color:#444;padding:20px 0;border-top:1px solid var(--bd)}
 strong{color:#e0e0e0}
+.version-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:3px;background:#1a2a1a;color:#4ade80;border:1px solid #2a3a2a;margin-left:8px;vertical-align:middle}
 @media(max-width:600px){.hero-q{font-size:22px}h2{font-size:21px}.tl{flex-direction:column;gap:3px}.tl-d{text-align:left;min-width:auto}}
 </style>
 </head>
@@ -98,7 +101,7 @@ strong{color:#e0e0e0}
 <strong>Note de méthode.</strong> Ce texte mélange trois choses, volontairement et explicitement. Des <strong>faits scientifiques publiés</strong> (tagués FAIT) — vérifiables, sourcés, non contestés. Des <strong>hypothèses publiées</strong> (tagués HYPOTHÈSE) — débattues dans la littérature, avec des partisans et des détracteurs sérieux. Et des <strong>spéculations</strong> (taguées comme telles) — des connexions originales non prouvées, formulées comme des questions, pas comme des certitudes. L'intérêt n'est pas dans chaque brique isolée. Il est dans le chemin qui les relie. Le lecteur est invité à tirer le fil et à casser ce qui ne tient pas.
 </div>
 
-<p>En 2018, le LiDAR révèle <strong>61 000 structures inconnues</strong> sous la jungle du Guatemala. En 2025, une étude de Princeton montre que Néandertal et Sapiens se sont métissés pendant <strong>250 000 ans</strong>. Un calcul indépendant confirme que 17 sites mégalithiques majeurs sont alignés sur un grand cercle avec un R² de <strong>0.9998</strong>. La médecine chinoise catalogue 13 000 substances actives — un volume de connaissances dont la constitution par essai-erreur demanderait mathématiquement plus de temps que les chronologies officielles ne le permettent.</p>
+<p>En 2018, le LiDAR révèle <strong>61 000 structures inconnues</strong> sous la jungle du Guatemala. En 2025, une étude de Princeton montre que Néandertal et Sapiens se sont croisés pendant <strong>250 000 ans</strong>. Un calcul indépendant confirme que 17 sites mégalithiques majeurs sont alignés sur un grand cercle avec un R² de <strong>0.9998</strong>. La médecine traditionnelle chinoise catalogue 13 000 substances actives — mais ce n'est pas le volume brut qui pose question. C'est l'<strong>espace combinatoire</strong> : tester les associations de ces substances deux par deux, trois par trois, avec des dosages et des préparations variables, génère un espace de possibilités qui explose exponentiellement. Explorer ne serait-ce qu'une fraction de cet espace par essai-erreur pur demanderait des millions d'années. Soit la sélection est guidée par une théorie sous-jacente, soit elle s'appuie sur une accumulation transmise sur une durée incompatible avec les chronologies connues.</p>
 
 <p>Aucune de ces données n'est contestée dans son domaine. Mais elles ne sont jamais mises en regard. L'archéologue ne lit pas le généticien. Le physicien ne lit pas l'ethnobotaniste. Le neuroscientifique ne lit pas le mythologue. Chacun tient un fragment d'un puzzle dont personne ne regarde la boîte.</p>
 
@@ -106,10 +109,24 @@ strong{color:#e0e0e0}
 
 </div>
 
-<div class="legend"><b>Niveaux :</b> <span class="tag tf">FAIT</span> publié, vérifiable <span class="tag th">HYPOTHÈSE</span> publiée, débattue <span class="tag ts">SPÉCULATION</span> non prouvée <span class="tag to">ORIGINAL</span> formulé ici</div>
+<div class="legend"><b>Niveaux :</b> <span class="tag tf">FAIT</span> publié, vérifiable <span class="tag th">HYPOTHÈSE</span> publiée, débattue <span class="tag ts">SPÉCULATION</span> non prouvée <span class="tag to">ORIGINAL</span> formulé ici <span class="tag tc">LIMITE</span> objection posée</div>
 
 <div class="nav-bar" id="nb"><div class="nav-toggle" onclick="document.getElementById('nb').classList.toggle('open')"><span>☰ Sommaire</span><span class="ic">▼</span></div><div class="nav-menu">
-<a href="#c1">1. Le LiDAR et les villes cachées</a><a href="#c2">2. Les plateaux submergés</a><a href="#c3">3. Le Déluge comme événement géologique</a><a href="#c4">4. L'alignement des sites mégalithiques</a><a href="#c5">5. Test : remonter les plaques tectoniques</a><a href="#c6">6. Dater par l'orientation (Carlotto)</a><a href="#c7">7. La base 60 — une origine possible</a><a href="#c8">8. Sapiens et Néandertal — absorption, pas extinction</a><a href="#c9">9. Les mythes comme mémoire déformée</a><a href="#c10">10. Comment une civilisation perd l'écriture</a><a href="#c11">11. L'ADN comme support d'information</a><a href="#c12">12. Fréquences cérébrales et traditions contemplatives</a><a href="#c13">13. La question des cycles</a><a href="#c14">14. Hypothèses testables</a>
+<a href="#c1">1. Le LiDAR et les villes cachées</a>
+<a href="#c2">2. Les plateaux submergés</a>
+<a href="#c3">3. Le Déluge comme événement géologique</a>
+<a href="#c4">4. L'alignement des sites mégalithiques</a>
+<a href="#c5">5. Test : remonter les plaques tectoniques</a>
+<a href="#c6">6. Dater par l'orientation (Carlotto)</a>
+<a href="#c7">7. La base 60 — une origine possible</a>
+<a href="#c8">8. Sapiens et Néandertal — absorption, pas extinction</a>
+<a href="#c9">9. Les mythes comme mémoire déformée</a>
+<a href="#c10">10. Comment une civilisation perd l'écriture</a>
+<a href="#c11">11. L'ADN comme support d'information</a>
+<a href="#c12">12. Fréquences, vibrations et traditions contemplatives</a>
+<a href="#c13">13. La question des cycles</a>
+<a href="#c15">15. Les marqueurs de régression</a>
+<a href="#c14">14. Hypothèses testables</a>
 </div></div>
 
 <!-- 1 -->
@@ -118,12 +135,12 @@ strong{color:#e0e0e0}
 <p><span class="tag tf">FAIT</span> Göbekli Tepe (Turquie), daté de 9600-8000 av. J.-C., est fouillé à seulement 5%. Ses couches les plus profondes sont les plus sophistiquées — le site semble régresser dans le temps. Des scans radar indiquent 15-20 enceintes supplémentaires non excavées, et une plateforme taillée dans le socle rocheux ("complexe E") dont la date est inconnue.</p>
 <div class="callout cw"><strong>Ce que ça ne prouve pas :</strong> L'existence de civilisations avancées pré-historiques. Ce que ça prouve : que notre cartographie du passé est massivement incomplète, et que les découvertes repoussent systématiquement les dates et les échelles.</div>
 <details><summary>Sources</summary><div class="dc">
-<p><a href="https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe" target="_blank">Göbekli Tepe — Wikipedia</a> · <a href="https://www.dainst.blog/the-tepe-telegrams/2016/06/22/how-old-ist-it-dating-gobekli-tepe/" target="_blank">Datation (Institut Archéologique Allemand)</a> · <a href="https://popular-archaeology.com/article/how-lidar-is-mapping-undiscovered-ancient-cities-worldwide/" target="_blank">LiDAR et cités perdues</a> · <a href="https://www.gpsworld.com/lidar-reveals-lost-cities-in-the-amazon/" target="_blank">Amazonie</a></p>
+<p><a href="https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe" target="_blank">Göbekli Tepe — Wikipedia</a> · <a href="https://www.dainst.blog/the-tepe-telegrams/2016/06/22/how-old-ist-it-dating-gobekli-tepe/" target="_blank">Datation (Institut Archéologique Allemand)</a> · <a href="https://popular-archaeology.com/article/how-lidar-is-mapping-undiscovered-ancient-cities-worldwide/" target="_blank">LiDAR et cités perdues</a></p>
 </div></details></div>
 
 <!-- 2 -->
 <div class="section" id="c2"><span class="sn">02</span><h2>Les plateaux submergés</h2>
-<p><span class="tag tf">FAIT</span> Au dernier maximum glaciaire (-21 000 ans), le niveau des mers était <span class="num">130 m plus bas</span>. La surface des plateaux continentaux aujourd'hui submergés équivaut à celle de l'Afrique. Le Golfe Persique était à sec — une vallée fertile traversée par le Tigre et l'Euphrate. Doggerland reliait l'Angleterre au continent. L'Asie du Sud-Est formait un seul continent (Sundaland). 99% de ces zones n'a jamais été exploré archéologiquement.</p>
+<p><span class="tag tf">FAIT</span> Au dernier maximum glaciaire (-21 000 ans), le niveau des mers était <span class="num">130 m plus bas</span>. La surface des plateaux continentaux aujourd'hui submergés représente environ <strong>deux tiers de la surface de l'Afrique</strong>. Le Golfe Persique était à sec — une vallée fertile traversée par le Tigre et l'Euphrate. Doggerland reliait l'Angleterre au continent. L'Asie du Sud-Est formait un seul continent (Sundaland). 99% de ces zones n'a jamais été exploré archéologiquement.</p>
 <p><span class="tag tf">FAIT</span> Les technologies actuelles (satellites) ne pénètrent que quelques mètres d'eau. Pour les profondeurs de 30-130m où vivaient les populations côtières, il faut des sonars, des robots sous-marins, du carottage — des opérations coûteuses et rares.</p>
 <p><span class="tag th">HYPOTHÈSE</span> Si les humains ont toujours privilégié les côtes et les estuaires (comme c'est le cas partout dans l'histoire documentée), les sites les plus importants de la préhistoire profonde sont probablement sous l'eau.</p>
 <details><summary>Sources</summary><div class="dc">
@@ -143,7 +160,9 @@ strong{color:#e0e0e0}
 <div class="section" id="c4"><span class="sn">04</span><h2>L'alignement des sites mégalithiques</h2>
 <p><span class="tag tf">FAIT</span> Gizeh, Machu Picchu, Nazca, l'Île de Pâques, Persépolis, Mohenjo Daro, Petra, les temples d'Angkor et d'autres sites sont alignés sur un seul grand cercle terrestre. Un calcul d'optimisation (Rosola Labs, 2025) donne un R² de 0.9998 avec un pôle en Alaska. Giza est à 6,66 km de la ligne sur un cercle de 40 000 km.</p>
 
-<div class="callout cw"><strong>Objection légitime :</strong> Avec suffisamment de sites anciens sur la planète, on peut toujours trouver un grand cercle qui en relie plusieurs. C'est un biais de sélection possible. Ce qui est remarquable ici, c'est le nombre de sites concernés (17+), la précision (< 0.1°), et le fait que ce cercle passe aussi par l'embouchure du Nil, du Tigre-Euphrate, de l'Indus, de l'Amazone et du Gange.</div>
+<div class="callout ck"><strong>Sur les pôles de référence :</strong> Les positions successives du pôle géomagnétique sont de la science documentée — mesurées dans les roches via le paléomagnétisme, indépendamment de toute archéologie. Si les positions utilisées par Carlotto correspondent à ces données paléomagnétiques établies (et non aux seules estimations climatiques d'Hapgood), la corrélation connecte deux corpus entièrement indépendants. C'est plus solide qu'il n'y paraît.</div>
+
+<div class="callout cw"><strong>Limite statistique non résolue :</strong> Avec suffisamment de sites anciens sur la planète, et plusieurs pôles successifs disponibles comme cibles, la probabilité de trouver une sélection de 17 sites alignés augmente mécaniquement. Ce qui est remarquable : le nombre de sites (17+), la précision (< 0,1°), et le fait que ce cercle passe aussi par l'embouchure du Nil, du Tigre-Euphrate, de l'Indus, de l'Amazone et du Gange. Un test de permutation rigoureux reste nécessaire pour exclure le hasard de sélection.</div>
 
 <p><span class="tag th">HYPOTHÈSE</span> Ce cercle correspondrait à un ancien équateur, déplacé par un glissement crustal ou un "true polar wander." Sur l'équateur, le soleil passe au zénith aux équinoxes — c'est le repère astronomique le plus fondamental pour des civilisations d'observation.</p>
 <details><summary>Sources</summary><div class="dc">
@@ -157,15 +176,22 @@ strong{color:#e0e0e0}
 <p><em>Limite : ce calcul ne couvre pas le "true polar wander" (basculement de la Terre entière), qui déplacerait tous les sites ensemble et ne serait pas détectable par cette méthode.</em></p></div>
 
 <!-- 6 -->
-<div class="section" id="c6"><span class="sn">06</span><h2>Dater par l'orientation</h2>
-<p><span class="tag th">HYPOTHÈSE</span> Mark Carlotto (ingénieur, ancien MITRE Corporation) a analysé l'orientation de 900+ sites anciens par imagerie satellite. Constat : 80% des sites "mal orientés" par rapport au nord actuel pointent vers 4 positions qui corrèlent avec les positions du pôle estimées par Hapgood à partir de données climatiques.</p>
+<div class="section" id="c6"><span class="sn">06</span><h2>Dater par l'orientation (Carlotto)</h2>
+<p><span class="tag th">HYPOTHÈSE</span> Mark Carlotto (ingénieur, ancien MITRE Corporation) a analysé l'orientation de 900+ sites anciens par imagerie satellite. Constat : 80% des sites "mal orientés" par rapport au nord actuel pointent vers 4 positions qui corrèlent avec les positions du pôle estimées à partir de données climatiques et paléomagnétiques.</p>
 <div class="tl"><div class="tl-d">> 130 000 ans</div><div class="tl-t"><strong>Mer de Béring</strong> — lignes de Nazca, Ollantaytambo</div></div>
 <div class="tl"><div class="tl-d">75k — 130k</div><div class="tl-t"><strong>Groenland</strong> — Parthénon, Baalbek, <mark>Mont du Temple</mark></div></div>
 <div class="tl"><div class="tl-d">50k — 75k</div><div class="tl-t"><strong>Mer de Norvège</strong> — Chichén Itzá</div></div>
 <div class="tl"><div class="tl-d">12k — 50k</div><div class="tl-t"><strong>Hudson Bay</strong> — Teotihuacan, Tikal</div></div>
 <div class="tl"><div class="tl-d">< 12 000</div><div class="tl-t"><strong>Pôle actuel</strong> — Gizeh, Stonehenge</div></div>
 
-<div class="callout cw"><strong>Limites :</strong> Hapgood est rejeté par la géophysique mainstream. Carlotto n'est pas archéologue de formation. Le modèle repose sur une hypothèse de déplacement crustal non prouvée. Cependant, les corrélations statistiques sont fortes (erreur < 0.2°, probabilité de hasard extrêmement faible selon ses calculs), et le modèle fait des prédictions testables.</div>
+<div class="callout ci">
+<strong>Clé de lecture :</strong> Ces datations ne signifient pas que le Parthénon (construit en -447) ou Baalbek ont été bâtis il y a 75 000 à 130 000 ans. Elles signifient que le <em>site</em> — son orientation, son implantation dans le paysage — pourrait avoir été défini à cette époque par une civilisation antérieure. Les bâtisseurs historiques ont construit <em>sur</em> un lieu dont l'orientation leur était transmise comme sacrée, sans nécessairement en comprendre l'origine astronomique. Ce phénomène est documenté à toutes les échelles : Chartres sur un site druidique, le Vatican sur un lieu de culte romain, la mosquée Al-Aqsa sur le Mont du Temple.<br><br>
+<strong>Le cas de l'Acropole est particulièrement net.</strong> Les archives de construction conservées révèlent quatre couches superposées sur le même rocher : mur mycénien (XIIIe siècle av. J.-C.) → Urparthenon en pōros (VIe siècle) → pré-Parthénon (~500 av. J.-C.) → Parthénon (-447). Chaque génération réutilise et s'adapte au socle de la précédente. Ce que personne n'a cherché : ce qui se trouve sous le socle mycénien. (Voir hypothèse testable n°3.)
+</div>
+
+<div class="callout cw"><strong>Deux couches archéologiques distinctes :</strong> Les structures monumentales seraient les traces de la civilisation pré-effondrement. Les outils de silex taillé contemporains — bricolés par des survivants ayant régressé techniquement — appartiennent à une couche différente. Les deux ne se contredisent pas : ils témoignent du même événement, vus depuis des strates sociales opposées. (Voir chapitre 15.)</div>
+
+<div class="callout cw"><strong>Limites persistantes :</strong> Hapgood est rejeté par la géophysique mainstream. Carlotto n'est pas archéologue de formation. Le modèle repose sur une hypothèse de déplacement crustal non prouvée. Les corrélations statistiques sont fortes (erreur < 0,2°), mais la méthode de sélection des sites de référence n'a pas fait l'objet d'un audit indépendant.</div>
 <details><summary>Sources</summary><div class="dc">
 <p><a href="https://www.researchgate.net/publication/342255402" target="_blank">Carlotto — A New Model (ResearchGate)</a> · <a href="https://beforeatlantis.com/" target="_blank">Before Atlantis</a> · <a href="https://beforeatlantis.com/2024/04/21/on-the-alignments-of-ancient-sites-a-global-survey/" target="_blank">Survey global 2024</a></p>
 </div></details></div>
@@ -182,13 +208,15 @@ strong{color:#e0e0e0}
 <strong>6.</strong> L'année bissextile (décalage de ¼ de jour) → nécessité impérative de noter → potentiellement, naissance de l'écriture par besoin astronomique plutôt que commercial.<br>
 <strong>7.</strong> Des millénaires d'observation transmise permettent de détecter la précession (1°/72 ans → cycle de 25 920 ans).
 </div>
-<p>Chaque élément existe dans la littérature. L'enchaînement complet partant du point zéro sur l'équateur est, à notre connaissance, rarement formulé ainsi.</p></div>
+<p>Chaque élément existe dans la littérature. L'enchaînement complet partant du point zéro sur l'équateur est, à notre connaissance, rarement formulé ainsi.</p>
+<div class="callout cw"><strong>Gap géographique :</strong> Les Sumériens et Babyloniens qui utilisaient la base 60 vivaient à ~32° de latitude nord — pas sur l'équateur. La cohérence de cette reconstitution implique soit que le système est né dans une population équatoriale aujourd'hui submergée ou disparue, et transmis vers la Mésopotamie, soit que le raisonnement de départ était astronomique et non phénoménologique. C'est une hypothèse supplémentaire non prouvée, signalée comme telle.</div>
+</div>
 
 <!-- 8 -->
 <div class="section" id="c8"><span class="sn">08</span><h2>Sapiens et Néandertal</h2>
-<p><span class="tag tf">FAIT</span> Étude Princeton (Science, juillet 2025) : Sapiens et Néandertal se sont croisés de manière répétée pendant 250 000 ans. Le chercheur Joshua Akey : "Je n'aime pas dire extinction. Ils ont été absorbés." Les non-Africains portent 1-4% d'ADN néandertalien.</p>
+<p><span class="tag tf">FAIT</span> Étude Princeton (Science, juillet 2025) : Sapiens et Néandertal ont coexisté géographiquement pendant environ 250 000 ans. Le chercheur Joshua Akey : "Je n'aime pas dire extinction. Ils ont été absorbés." Les non-Africains portent 1-4% d'ADN néandertalien — signal de quelques événements de contact limités, non d'un métissage continu.</p>
 <p><span class="tag tf">FAIT</span> Néandertal : cerveau plus volumineux, art (peintures rupestres confirmées), outils, vêtements, rituels funéraires, possible navigation. 400 000 ans d'existence.</p>
-<p><span class="tag to">ORIGINAL</span> Si deux populations cohabitent pendant des centaines de milliers d'années sans se mélanger, puis fusionnent — une barrière (territoriale, culturelle, civilisationnelle ?) a disparu. La coïncidence chronologique avec les catastrophes climatiques de fin de glaciation est notable.</p>
+<p><span class="tag to">ORIGINAL</span> Le signal génétique de 1 à 4% indique des contacts ponctuels, non une cohabitation intensive. Mais la transmission culturelle n'obéit pas aux mêmes contraintes que la transmission génétique. Les réseaux d'échange du paléolithique supérieur montrent des matières premières (obsidienne, coquillages, ocre) circulant sur 500 à 800 km — sans métissage massif nécessaire. Une technique, un récit, une orientation astronomique peuvent passer entre groupes qui ne se mélangent presque pas. Des ponts culturels sont possibles là où les ponts génétiques sont quasi absents.</p>
 <details><summary>Sources</summary><div class="dc">
 <p><a href="https://www.sciencedaily.com/releases/2025/07/250713032519.htm" target="_blank">Princeton — ScienceDaily (2025)</a> · <a href="https://www.nature.com/articles/s41598-025-22376-6" target="_blank">Modèle de dilution génétique — Nature (2025)</a></p>
 </div></details></div>
@@ -197,13 +225,19 @@ strong{color:#e0e0e0}
 <div class="section" id="c9"><span class="sn">09</span><h2>Les mythes comme mémoire déformée</h2>
 <p><span class="tag to">ORIGINAL</span> Si plusieurs espèces humaines physiquement distinctes ont coexisté pendant des dizaines de milliers d'années, et que cette coexistence a été transmise oralement sur des millénaires — les descriptions se seraient nécessairement déformées. Un Néandertalien (front fuyant, arcades massives, force supérieure, corps trapu) raconté pendant 100 000 ans de bouche-à-oreille finirait caricaturé par ses traits les plus distinctifs — le même mécanisme qui produit toute caricature raciale dans l'histoire humaine.</p>
 <p>Nephilim (Torah), Enkidu (Gilgamesh), Titans (Grèce), dieux à têtes animales (Égypte, Mésopotamie, Inde) — ces récits décrivent tous la coexistence d'êtres physiquement différents. L'interprétation standard dit "mythologie." L'alternative : mémoire déformée d'une réalité documentée par la génétique.</p>
+<div class="callout cw"><span class="tag tc">LIMITE</span> <strong>Mécanisme de transmission non établi.</strong> Pour qu'une description reconnaissable d'un Néandertal survive oralement depuis l'extinction (~40 000 ans BP) jusqu'aux textes sumériens (-3 400) ou hébraïques (-800), il faudrait une stabilité sémantique sur 36 000 à 37 000 ans. Les traditions orales les plus stables connues — certaines traditions aborigènes australiennes décrivant des inondations côtières — atteignent au mieux 10 000 ans, et font déjà figure d'exception absolue. L'hypothèse est formulée comme question. Elle nécessite un mécanisme de transmission que personne n'a encore établi.</div>
 <p><em>C'est une hypothèse. Elle est formulée comme question, pas comme certitude.</em></p></div>
 
 <!-- 10 -->
 <div class="section" id="c10"><span class="sn">10</span><h2>Comment une civilisation perd l'écriture</h2>
 <p><span class="tag to">ORIGINAL</span> Si le support d'écriture est technologique (pas physique), une catastrophe détruit le support et le savoir disparaît — non pas parce que les gens meurent, mais parce que plus personne ne sait écrire à la main. Le savoir survit oralement en se dégradant.</p>
 <p>En 2026, la quasi-totalité du savoir humain repose sur des supports dont la durée de vie est inversement proportionnelle à leur capacité : pierre (130 000 ans), argile (5 000), papier (500), disque dur (20), serveur cloud (tant qu'il y a de l'électricité).</p>
-<p><span class="tag tf">FAIT</span> Le cunéiforme sumérien apparaît vers -3400 déjà complet — sans phase de développement visible dans les archives. Ce qui est cohérent avec la retranscription d'un système préexistant sur un support qui n'a pas survécu.</p></div>
+<p><span class="tag tf">FAIT</span> Le cunéiforme sumérien apparaît vers -3400 avec une phase proto-cunéiforme documentée depuis -8000 (tokens d'argile comptables) — une transition sur 5 000 ans. Ce qui est cohérent avec la retranscription progressive d'un système de connaissance préexistant sur un nouveau support physique après un effondrement.</p>
+<div class="callout ci">
+<strong>La non-linéarité de la sophistication :</strong> Le Parthénon est construit en -447. Les tablettes d'argile sumériennes commencent vers -3400. Dans la chronologie officielle, on grave sur argile <em>avant</em> de tailler le marbre avec précision — ce qui suggère que des niveaux techniques radicalement différents coexistaient sur des territoires distincts, ou que la sophistication n'est pas un progrès linéaire mais une série de pertes et de récupérations partielles. Göbekli Tepe illustre le même paradoxe stratigraphiquement : les couches les plus anciennes sont les plus élaborées.
+</div>
+<p><span class="tag tf">FAIT</span> L'effondrement de l'Âge du Bronze (~1200 av. J.-C.) : en quelques décennies, l'écriture linéaire B disparaît complètement de Grèce, les réseaux commerciaux longue distance s'effondrent, les techniques de construction monumentale sont perdues. La Grèce entre dans 400 ans d'âge sombre. Preuve que l'effondrement culturel complet peut survenir en quelques générations, sur des populations importantes, sans extinction physique.</p>
+</div>
 
 <!-- 11 -->
 <div class="section" id="c11"><span class="sn">11</span><h2>L'ADN comme support d'information</h2>
@@ -212,11 +246,28 @@ strong{color:#e0e0e0}
 <p><em>C'est la spéculation la plus audacieuse de ce document. Elle est invérifiable en l'état, mais elle génère des prédictions testables (voir chapitre 14).</em></p></div>
 
 <!-- 12 -->
-<div class="section" id="c12"><span class="sn">12</span><h2>Fréquences cérébrales et traditions contemplatives</h2>
-<p><span class="tag tf">FAIT</span> Les ondes cérébrales se répartissent en bandes : bêta (~21 Hz, état éveillé), alpha (~13 Hz, relaxation), thêta (~7 Hz, méditation profonde), delta (~4 Hz, sommeil profond). L'hypnotiseur Messmer utilise explicitement ces fréquences. Les tambours chamaniques du monde entier battent à ~4,5 Hz (thêta).</p>
-<p><span class="tag tf">FAIT</span> La théorie M (extension de la théorie des cordes) nécessite 7 dimensions supplémentaires. Toutes les grandes cosmologies traditionnelles décrivent 7 niveaux de réalité (hindouisme, bouddhisme, Kabbale, Islam, Égypte ancienne, chamanisme sibérien, mythologie maya). La récurrence du nombre 7 est documentée mais inexpliquée.</p>
-<p><span class="tag tf">FAIT</span> Février 2026 : des chercheurs de Witwatersrand découvrent des structures topologiques atteignant 48 dimensions dans la lumière intriquée (Nature Photonics).</p>
-<p><span class="tag ts">SPÉCULATION</span> Les "7 mondes" des traditions seraient des bandes de fréquences de la réalité, accessibles par des états de conscience spécifiques. La physique arrive aux mêmes conclusions structurelles par les mathématiques ; les traditions y arrivaient par l'expérience directe.</p></div>
+<div class="section" id="c12"><span class="sn">12</span><h2>Fréquences, vibrations et traditions contemplatives</h2>
+
+<p><span class="tag tf">FAIT</span> Les ondes cérébrales se répartissent en bandes : bêta (~21 Hz, état éveillé), alpha (~13 Hz, relaxation), thêta (~7 Hz, méditation profonde), delta (~4 Hz, sommeil profond). Les tambours chamaniques du monde entier battent à ~4,5 Hz (thêta). Ces correspondances ne sont pas culturelles — elles sont physiologiques.</p>
+
+<h3>Cadre méthodologique : quand la convergence est physique</h3>
+<p>Avant d'interpréter la récurrence de certains nombres ou structures dans les traditions, il faut poser une question préalable : <em>cette récurrence est-elle culturelle (transmission, emprunt, hasard) ou physique (redécouverte indépendante d'une propriété réelle) ?</em></p>
+<p>Les intervalles musicaux consonants offrent un cas d'école. Les rapports de fréquences suivants produisent des effets physiologiques mesurables — résonance des cavités crâniennes, synchronisation neuronale, perception de consonance — indépendamment de toute culture :</p>
+
+<div class="ratio-row">
+  <div class="ratio-box"><strong>2:1</strong><span>Octave — redoublement de fréquence. Toutes les traditions musicales documentées la reconnaissent comme identité sonore.</span></div>
+  <div class="ratio-box"><strong>3:2</strong><span>Quinte — la plus consonante après l'octave. Base du pythagorisme, du râga indien, de la musique chinoise antique.</span></div>
+  <div class="ratio-box"><strong>4:3</strong><span>Quarte — présente dans toutes les gammes connues. Rapport entier simple, effet physiologique direct.</span></div>
+</div>
+
+<p>Ces trois rapports ne se retrouvent pas dans toutes les traditions parce que les cultures se copient — ils s'y retrouvent parce qu'ils décrivent des propriétés physiques du son que n'importe quelle oreille humaine finit par découvrir par essai-erreur. <strong>La convergence est physique, pas culturelle.</strong></p>
+
+<p><span class="tag th">HYPOTHÈSE</span> Le même cadre pourrait s'appliquer à d'autres récurrences numériques ou structurelles dans les traditions contemplatives : des nombres ou des structures qui reviennent non pas parce qu'ils ont été transmis, mais parce qu'ils correspondent à des propriétés physiques redécouvertes indépendamment. Ce cadre est une méthode de tri, pas une réponse : pour chaque récurrence, la question est "quelle propriété physique réelle ce nombre pourrait-il encoder ?"</p>
+
+<div class="callout cw"><span class="tag tc">LIMITE MAINTENUE</span> La connexion directe entre les 7 dimensions supplémentaires de la théorie M et les "7 niveaux de réalité" des traditions est retirée de ce document. Ces 7 dimensions sont compactifiées à l'échelle de Planck (~10⁻³⁵ m) — radicalement inaccessibles à quoi que ce soit de macroscopique. Le "7" des traditions musicales (7 notes) a en revanche une base physique identifiable dans la série des harmoniques naturelles. La distinction entre les deux cas est précisément l'objet de ce cadre méthodologique.</div>
+
+<p><span class="tag tf">FAIT</span> Février 2026 : des chercheurs de Witwatersrand découvrent des structures topologiques atteignant 48 dimensions dans la lumière intriquée (Nature Photonics). La physique continue d'élargir le cadre de ce qui est structurellement possible.</p>
+</div>
 
 <!-- 13 -->
 <div class="section" id="c13"><span class="sn">13</span><h2>La question des cycles</h2>
@@ -224,15 +275,44 @@ strong{color:#e0e0e0}
 <p><span class="tag tf">FAIT</span> Homo erectus a existé pendant 1,5 million d'années. Les dinosaures pendant 165 millions. Les céphalopodes intelligents depuis 500 millions. Le réseau mycorhizien (communication inter-arbres par champignons) fonctionne depuis 400 millions d'années.</p>
 <p>La question n'est pas tant "est-ce arrivé avant" que "pourquoi suppose-t-on que non, alors qu'on n'a aucun moyen de vérifier."</p></div>
 
+<!-- 15 — nouveau -->
+<div class="section" id="c15"><span class="sn">15</span><h2>Les marqueurs de régression <span class="version-badge">nouveau</span></h2>
+<p class="ss">Si un effondrement civilisationnel majeur s'est produit, il doit laisser des traces lisibles. Ces traces ne seraient pas uniformes — certaines dimensions régressent pendant que d'autres avancent. Voici trois types de marqueurs superposables.</p>
+
+<h3>1. Régression technique</h3>
+<p><span class="tag tf">FAIT</span> La stratigraphie de Göbekli Tepe est l'argument le plus propre : les couches les plus profondes — les plus <em>anciennes</em> — sont les plus sophistiquées. Les piliers sont plus grands, mieux taillés, plus complexement décorés. Les couches supérieures, plus récentes, sont progressivement plus grossières. Le site régresse dans le temps. C'est observable directement, sans interprétation.</p>
+<p><span class="tag tf">FAIT</span> Les pyramides égyptiennes suivent la même logique inversée : Gizeh (~2560 av. J.-C.) est le sommet technique absolu. Les pyramides qui suivent sont moins bien construites ; plusieurs s'effondrent de leur vivant. La sophistication va décroissant dans le temps documenté — ce qui suggère que Gizeh n'est pas un point de départ mais un point de récupération partielle.</p>
+<p><span class="tag tf">FAIT</span> Le béton romain — sa formulation exacte est perdue pendant plus de 1 000 ans. Des structures romaines ont survécu 2 000 ans sous l'eau ; on ne sait les reproduire que depuis 2017. Un savoir technique peut disparaître indépendamment de la population.</p>
+
+<div class="callout ci"><strong>Le progrès est multidimensionnel.</strong> Comparer Notre-Dame de Paris (1163-1345) et le Centre Pompidou (1977) illustre que l'avancée technique dans une dimension — puissance, standardisation, vitesse — coexiste avec une régression dans d'autres : maîtrise de la taille de pierre, acoustique intégrée à l'architecture, transmission artisanal sur générations. Personne ne sait reproduire une cathédrale gothique aujourd'hui — non par manque de volonté, mais par rupture du réseau de transmission vivant. Chercher une "régression globale" dans les archives préhistoriques est probablement la mauvaise question. La bonne question : quelles dimensions régressent, et à quelle vitesse ?</div>
+
+<h3>2. Régression nutritionnelle et culinaire</h3>
+<p><span class="tag tf">FAIT</span> Le passage chasse-cueillette → agriculture néolithique est une régression nutritionnelle documentée dans les ossements : les populations agricoles précoces sont en moyenne plus petites, avec plus de caries, moins de densité osseuse, des signes de carence en protéines. L'agriculture n'est pas un progrès nutritionnel — c'est une stratégie de survie collective au détriment de la santé individuelle.</p>
+<p><span class="tag to">ORIGINAL</span> La régression culinaire est le marqueur le plus sous-estimé. Des techniques comme la nixtamalisation du maïs (qui rend disponible la niacine, sinon absente) ou la fermentation du manioc (qui en élimine le cyanure) impliquent une connaissance empirique précise dont la perte est littéralement mortelle — les populations qui perdent ces techniques meurent de pellagre ou d'intoxication, même en ayant accès à la nourriture. Ce type de régression est invisible dans les ossements sauf si on cherche exactement les bonnes carences, et elle peut survenir en une ou deux générations.</p>
+
+<h3>3. Régression des réseaux d'échange</h3>
+<p><span class="tag tf">FAIT</span> La présence d'obsidienne, de coquillages ou de matières premières exotiques dans un site archéologique est un marqueur direct de réseau longue distance — et donc d'organisation sociale complexe. Leur disparition dans les couches supérieures d'un même site signale un effondrement de ce réseau. Ces marqueurs sont mesurables, datables et géolocalisables.</p>
+
+<h3>Prédiction centrale</h3>
+<div class="callout cg"><strong>Si c'est une réinvention et non une invention</strong>, la vitesse d'adoption devrait être anormalement rapide. Une société qui réinvente quelque chose qu'elle a oublié va plus vite qu'une société qui l'invente ex nihilo — parce que des fragments persistent dans les mythes, les rituels, les gestes. L'apparition "soudaine" de Göbekli Tepe, du cunéiforme, des techniques métallurgiques pourrait être le signal d'une réactivation à partir de fragments, plutôt qu'une invention à partir de rien. Cette prédiction est testable : la vitesse de diffusion d'une réinvention devrait dépasser statistiquement celle d'une première invention dans des contextes comparables.</div>
+
+<details><summary>Sources</summary><div class="dc">
+<p><a href="https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe" target="_blank">Göbekli Tepe — stratigraphie</a> · <a href="https://en.wikipedia.org/wiki/Bronze_Age_collapse" target="_blank">Effondrement de l'Âge du Bronze</a> · <a href="https://www.science.org/doi/10.1126/science.aad9569" target="_blank">Béton romain — Science (2017)</a> · <a href="https://en.wikipedia.org/wiki/Nixtamalization" target="_blank">Nixtamalisation</a></p>
+</div></details></div>
+
 <!-- 14 -->
 <div class="section" id="c14"><span class="sn">14</span><h2>Hypothèses testables</h2>
-<p>Si ce cadre a une valeur, il doit faire des prédictions vérifiables. En voici six :</p>
+<p>Si ce cadre a une valeur, il doit faire des prédictions vérifiables. En voici huit :</p>
 <details><summary>1. Base 60 et cultures équatoriales</summary><div class="dc"><p>Vérifier si les isolats culturels proches de l'équateur utilisent des systèmes de comptage basés sur les phalanges. Étude ethnomathématique comparative.</p></div></details>
 <details><summary>2. Morphométrie des "dieux" vs reconstructions d'hominidés</summary><div class="dc"><p>Comparer systématiquement les proportions des représentations de divinités à têtes animales avec les reconstructions faciales de Néandertal, Denisovien, Erectus. Mesurer les ratios crâniofaciaux.</p></div></details>
-<details><summary>3. Orientation des couches profondes (extension Carlotto)</summary><div class="dc"><p>Appliquer le modèle d'orientation aux structures SOUS les structures connues (couches profondes de Göbekli Tepe, fondations du Mont du Temple). Si les couches inférieures pointent vers des pôles plus anciens, c'est une confirmation forte.</p></div></details>
+<details><summary>3. Orientation des couches profondes (extension Carlotto)</summary><div class="dc"><p>Appliquer le modèle d'orientation aux structures SOUS les structures connues (couches profondes de Göbekli Tepe, fondations du Mont du Temple). Si les couches inférieures pointent vers des pôles plus anciens, c'est une confirmation forte.</p>
+<p><strong>Cas de l'Acropole d'Athènes — angle mort documenté.</strong> Les archives de construction du Parthénon sont partiellement conservées (comptes financiers de chantier, listes de sculpteurs, détail des métopes entre -446 et -440). Elles révèlent une stratigraphie précise et connue : mur d'enceinte mycénien (XIIIe siècle av. J.-C.) → "Urparthenon" en pōros (VIe siècle av. J.-C.) → pré-Parthénon (~500 av. J.-C.) → Parthénon (-447). Chaque couche réutilise et s'adapte à la précédente. Lorsque les architectes d'Ictinus prennent le chantier en -447, un imposant socle de pierre calcaire est déjà en place, partiellement enterré par des travaux antérieurs — ils doivent composer avec lui.</p>
+<p>Ce qui n'est pas documenté — et n'a jamais été cherché sous cet angle — c'est ce qui se trouve sous le socle mycénien. Les Mycéniens eux-mêmes construisaient sur quelque chose. Le socle rocheux de la colline n'a pas fait l'objet d'une étude orientée vers la détection de taille ou d'occupation pré-mycénienne. C'est une question archéologique concrète avec une stratigraphie documentée jusqu'au XIIIe siècle av. J.-C., et un angle mort délibéré en dessous. Carlotto classe le Parthénon dans la période Groenland (75 000-130 000 ans BP) — si le socle rocheux montre des traces de travail humain non mycénien, c'est une confirmation testable directe.</p></div></details>
 <details><summary>4. Durabilité des supports numériques</summary><div class="dc"><p>Modéliser le temps de perte totale d'information si l'infrastructure électrique mondiale cessait de fonctionner. Combien de générations avant l'effacement complet ?</p></div></details>
 <details><summary>5. Expression génique en méditation profonde</summary><div class="dc"><p>Mesurer l'activité épigénétique et l'expression génique de sujets en méditation thêta/delta vs état normal. Chercher des patterns d'activation spécifiques aux états modifiés de conscience.</p></div></details>
 <details><summary>6. Linguistique comparée des isolats</summary><div class="dc"><p>Comparer les structures profondes de l'euskara (basque), de l'aïnou, des langues dravidiennes et andamanaises. Chercher des universaux grammaticaux qui pointeraient vers une origine commune pré-submersion.</p></div></details>
+<details><summary>7. Corrélation temporelle des trois marqueurs de régression</summary><div class="dc"><p>Les régressions nutritionnelle, technique et des réseaux d'échange devraient être corrélées dans le temps si elles partagent une cause commune. Identifier dans les archives isotopiques, stratigraphiques et de distribution des matières premières les périodes où les trois marqueurs chutent simultanément. La catastrophe de Toba (~74 000 ans BP) est le candidat le plus documenté.</p></div></details>
+<details><summary>8. Vitesse d'adoption : réinvention vs invention</summary><div class="dc"><p>Comparer la vitesse de diffusion des technologies qui "apparaissent soudainement" dans les archives (métallurgie, écriture, architecture monumentale) avec celle de technologies dont on peut documenter l'invention progressive. Si la réapparition est statistiquement plus rapide que l'invention ex nihilo dans des contextes de complexité sociale comparable, c'est un signal de réactivation à partir de fragments.</p></div></details>
 
 <hr>
 
@@ -244,9 +324,11 @@ strong{color:#e0e0e0}
 
 <div class="fq"><p>"L'absence de preuve n'est pas la preuve de l'absence —<br>surtout quand le temps lui-même efface les preuves."</p></div>
 
-<div class="footer"><p>27 mars 2026 · Notes de recherche · Chaque source est vérifiable · Chaque spéculation est signalée</p></div>
+<div class="footer"><p>27 mars 2026 · Notes de recherche v2 · Chaque source est vérifiable · Chaque spéculation est signalée · Chaque limite est posée</p></div>
 </div>
 
-<script>document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nb').classList.remove('open')))</script>
+<script>
+document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nb').classList.remove('open')))
+</script>
 </body>
 </html>
